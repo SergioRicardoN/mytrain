@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar senha</title>
+    <link rel="stylesheet" href="Auth/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <i class="material-icons">lock_open</i>
+            <h1>Recuperar senha</h1>
+        </div>
+
+        <form class="login-form" action="/recuperar-senha" method="POST">
+            <label for="email">Email cadastrado</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            <button type="submit" class="btn-principal">Enviar instruções</button>
+        </form>
+
+        <div class="actions">
+            <button class="btn-secundario" onclick="window.location.href='index.html'">Voltar ao Login</button>
+        </div>
+    </div>
+</body>
+
+</html>

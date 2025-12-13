@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Verifique seu email</title>
+    <link rel="stylesheet" href="Auth/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <i class="material-icons">mark_email_unread</i>
+            <h1>Verifique seu email</h1>
+        </div>
+        <p style="color:#333; font-size:15px; margin-bottom:20px;">
+            Se o email estiver cadastrado, você receberá instruções para redefinir sua senha.
+        </p>
+        <div class="actions">
+            <button class="btn-secundario" onclick="window.location.href='index.html'">Voltar ao Login</button>
+        </div>
+    </div>
+
+    <div id="notificacao" class="notificacao">
+        ✅ Instruções enviadas para o seu email!
+    </div>
+
+
+    <script>
+        window.onload = () => {
+            const alerta = document.getElementById("notificacao");
+            alerta.classList.add("mostrar");
+            setTimeout(() => {
+                alerta.classList.remove("mostrar");
+            }, 4000);
+        };
+    </script>
+</body>
+
+</html>

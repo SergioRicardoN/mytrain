@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MY TRAIN - Login</title>
+    <link rel="stylesheet" href="Auth/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <i class="material-icons">fitness_center</i>
+            <h1>MY TRAIN</h1>
+        </div>
+
+        <form class="login-form" action="/login" method="POST">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="••••••••" required>
+
+            <button type="submit" class="btn-principal">Entrar</button>
+        </form>
+
+        <div class="actions">
+            <button class="btn-secundario" onclick="window.location.href='criar-conta.html'">Criar Conta</button>
+            <a class="link-recuperar" href="recuperar-senha.html">Esqueceu a senha?</a>
+        </div>
+    </div>
+</body>
+
+</html>
