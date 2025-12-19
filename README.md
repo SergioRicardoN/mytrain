@@ -1,112 +1,97 @@
-# 🏋️‍♂️ MyTrain — Sistema de Treinos Personalizados
+# 🏋️ MY TRAIN
 
-**MyTrain** é um sistema de cadastro de usuários focado em treinos personalizados. Cada usuário define seu nível de experiência e objetivo físico, permitindo uma base para criação de planos de treino no futuro.
-
-O projeto foi desenvolvido com **Node.js**, **Express**, **Sequelize** e **MySQL**, com o objetivo principal de aprendizado em backend, banco de dados e organização de projetos.
+Aplicação web para **treinos interativos** com vídeos do YouTube, sistema de pontos e ranking.  
+O objetivo é incentivar **disciplina e foco nos exercícios**, com uma interface simples, moderna e motivadora.
 
 ---
 
 ## 🚀 Funcionalidades
 
-* 👤 Cadastro de usuários (nome, e-mail e senha)
-* 🔐 Login básico com validação
-* 📊 Definição do nível de treino (iniciante, intermediário, avançado)
-* 🎯 Escolha do objetivo físico (emagrecimento, hipertrofia, resistência)
-* 🗃️ Persistência de dados em banco MySQL
-* 🧱 Arquitetura modular utilizando Sequelize (ORM)
+- 🎥 **Modal de vídeo** com controles:
+  - Play
+  - Pause
+  - Reiniciar
+  - Próximo
+  - Anterior
+  - Finalizar treino
+- 🔥 **Sistema de pontos**:
+  - Fogo
+  - Moedas
+  - XP (atualizados ao concluir treinos)
+- 🏆 **Ranking dinâmico** com medalhas para os melhores usuários
+- 🌙 **Modo escuro**
+- ♿ **Modo acessibilidade**
+- 🚪 **Botão de saída** para retornar ao login
+- 📱 **Design responsivo** (desktop e mobile)
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-
-| Tecnologia | Finalidade                                 |
-| ---------- | ------------------------------------------ |
-| Node.js    | Ambiente de execução JavaScript            |
-| Express    | Framework para criação do servidor e rotas |
-| Sequelize  | ORM para comunicação com o MySQL           |
-| MySQL      | Banco de dados relacional                  |
-| HTML/CSS   | Interface básica do sistema                |
-
----
-
-## 📁 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
 ```text
-mytrain/
-├── config/                 # Configuração do banco de dados
-│   └── trainbanco.js
-├── models/                 # Models Sequelize
-│   ├── usuario.js
-│   ├── nivel.js
-│   └── objetivo.js
-├── public/                 # Arquivos estáticos (HTML)
-│   ├── index.html
-│   ├── dashboard.html
-│   ├── erro-login.html
-│   ├── selecao.html
-│   └── objetivo.html
-├── server.js               # Servidor Express
-├── package.json            # Dependências do projeto
-└── .gitignore
-```
+my-train/
+│
+├── index.html              # Tela de login
+├── principal.html          # Tela principal de treinos
+├── Principal/
+│   ├── principal.css      # Estilos principais
+│   └── principal.js       # Lógica de treino e integração
+└── README.md               # Documentação do projeto
 
----
+⚙️ Como Rodar o Projeto
 
-## 💻 Como Rodar o Projeto Localmente
+Clone o repositório:
 
-### 1️⃣ Clone o repositório
+git clone https://github.com/seuusuario/my-train.git
 
-```bash
-git clone https://github.com/SergioRicardoN/mytrain.git
-cd mytrain
-```
 
-### 2️⃣ Instale as dependências
+Entre na pasta do projeto:
 
-```bash
-npm install
-```
+cd my-train
 
-### 3️⃣ Configure o banco de dados
 
-No arquivo:
+Abra o arquivo index.html no navegador para acessar a tela de login.
 
-```text
-config/trainbanco.js
-```
+Após o login, você será direcionado para principal.html.
 
-Configure:
+🖼️ Demonstração
 
-* Usuário do MySQL
-* Senha
-* Nome do banco de dados
+HUD overlay no canto inferior esquerdo do vídeo, mostrando:
 
-Certifique-se de que o MySQL esteja rodando.
+Nome do exercício
 
-### 4️⃣ Execute o servidor
+Série atual
 
-```bash
-node server.js
-```
+Botão 🚪 Sair na top-bar para retornar ao login
 
-### 5️⃣ Acesse no navegador
+Barra de navegação inferior com atalhos para:
 
-```text
-http://localhost:3000
-```
+Principal
 
----
+Vídeos
 
-## 📌 Observações
+Ranking
 
-* Este projeto tem fins **educacionais**.
-* Não utiliza criptografia avançada de senhas (não recomendado para produção).
-* Ideal para estudos de **Node.js + MySQL + Sequelize**.
+PDF
 
----
+Configurações
 
-## 👨‍💻 Autor
+📌 Tecnologias Utilizadas
 
-Desenvolvido por **Sergio Ricardo** 🚀
+HTML5
 
-Projeto criado para aprendizado em backend e banco de dados.
+CSS3
+
+JavaScript (ES6)
+
+YouTube IFrame API
+
+👨‍💻 Autor
+
+Projeto desenvolvido por Sergio
+📍 Jaboatão dos Guararapes - PE, Brasil
+
+📄 Licença
+
+Este projeto está sob a licença MIT.
+Sinta-se livre para usar, modificar e compartilhar.
