@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Meus Livros</title>
+
+    <!-- CSS da página -->
+    <link rel="stylesheet" href="Livros/livros.css" />
+
+    <!-- Material Icons (ícones da barra de navegação) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="titulo">📚 Meus Livros</h1>
+        <p class="subtitulo">Clique em um livro para abrir o PDF</p>
+
+        <!-- Lista de livros -->
+        <div class="livros-list">
+            <div class="livro-item">
+                <a href="https://tiagonutri.com.br/wp-content/uploads/2024/06/E-book-de-Musculacao-Tiagonutri.pdf" target="_blank">
+                    <img src="img/E-book-de-Musculacao-Tiagonutri.pdf.jpg" alt="E-book de Musculação" class="livro-capa" />
+                    <span class="nome">E-book de Musculação</span>
+                </a>
+            </div>
+
+            <div class="livro-item">
+                <a href="https://tiagonutri.com.br/wp-content/uploads/2024/06/E-book-de-receitas-Tiagonuti.pdf" target="_blank">
+                    <img src="img/E-book-de-receitas-Tiagonuti.pdf.jpg" alt="E-book de Receitas" class="livro-capa" />
+                    <span class="nome">E-book de Receitas</span>
+                </a>
+            </div>
+
+            <div class="livro-item">
+                <a href="https://bvsms.saude.gov.br/bvs/publicacoes/guia_atividade_fisica_populacao_brasileira.pdf" target="_blank">
+                    <img src="img/guia_atividade_fisica_populacao_brasileira.pdf.jpg" alt="Guia de Atividade Física" class="livro-capa" />
+                    <span class="nome">Guia de Atividade Física</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de navegação -->
+    <div class="nav-bar">
+        <a href="principal.html" class="nav-item">
+            <i class="material-icons">home</i> Principal
+        </a>
+        <a href="videos.html" class="nav-item">
+            <i class="material-icons">play_circle_filled</i> Vídeos
+        </a>
+        <a href="ranking.html" class="nav-item">
+            <i class="material-icons">emoji_events</i> Ranking
+        </a>
+        <a href="livros.html" class="nav-item active">
+            <i class="material-icons">menu_book</i> PDF
+        </a>
+        <a href="config.html" class="nav-item">
+            <i class="material-icons">settings</i> Config
+        </a>
+    </div>
+
+
+    <!-- JS da página -->
+    <script src="Livros/livros.js"></script>
+</body>
+
+</html>

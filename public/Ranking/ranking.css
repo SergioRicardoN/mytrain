@@ -1,0 +1,199 @@
+/* 🌤 Modo claro */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: #333;
+    padding-bottom: 80px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titulo {
+    font-size: 24px;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.ranking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ranking-item {
+    background: #ffffffcc;
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid #43a047;
+    /* ✅ borda verde sempre */
+}
+
+.ranking-item.destaque {
+    background: #a5d6a7;
+    color: #fff;
+    font-weight: bold;
+}
+
+.posicao {
+    font-size: 16px;
+}
+
+.nome {
+    font-size: 16px;
+}
+
+.pontos {
+    font-size: 14px;
+    color: #388e3c;
+}
+
+.meu-ranking {
+    background-color: #ffeaa7;
+    border: 3px solid #fdcb6e;
+}
+
+
+/* 📱 Barra de navegação */
+
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffffcc;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-item {
+    text-align: center;
+    color: #555;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nav-item i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.nav-item.active {
+    color: #2e7d32;
+}
+
+.nav-item.active i {
+    color: #2e7d32;
+}
+
+
+/* 🌙 Modo escuro */
+
+body.dark {
+    background: linear-gradient(135deg, #1b1f1d, #2e2e2e);
+    color: #dfe6e9;
+}
+
+body.dark .titulo {
+    color: #66bb6a;
+}
+
+body.dark .subtitulo {
+    color: #b2bec3;
+}
+
+body.dark .ranking-item {
+    background-color: #2e2e2e;
+    color: #dfe6e9;
+    border: 3px solid #66bb6a;
+    /* ✅ borda verde escuro */
+}
+
+body.dark .ranking-item.destaque {
+    background-color: #1b5e20;
+    color: #fff;
+}
+
+body.dark .pontos {
+    color: #66bb6a;
+}
+
+body.dark .meu-ranking {
+    background-color: #4e342e;
+    border: 3px solid #ffb74d;
+}
+
+body.dark .nav-bar {
+    background: #1b1f1dcc;
+    border-top: 1px solid #555;
+}
+
+body.dark .nav-item {
+    color: #dfe6e9;
+}
+
+body.dark .nav-item.active {
+    color: #66bb6a;
+}
+
+body.dark .nav-item.active i {
+    color: #66bb6a;
+}
+
+
+/* ♿ Acessibilidade */
+
+body.acessibilidade {
+    font-size: 17px;
+    /* texto maior, equilibrado */
+    line-height: 1.5;
+    /* espaçamento confortável */
+}
+
+body.acessibilidade .titulo {
+    font-size: 26px;
+    /* título levemente maior */
+}
+
+body.acessibilidade .subtitulo {
+    font-size: 16px;
+    /* subtítulo mais legível */
+}
+
+body.acessibilidade .posicao,
+body.acessibilidade .nome {
+    font-size: 18px;
+    /* nomes e posições mais visíveis */
+}
+
+body.acessibilidade .pontos {
+    font-size: 16px;
+    /* pontos mais destacados */
+}
+
+body.acessibilidade .nav-item {
+    font-size: 14px;
+    /* navegação mais legível */
+}

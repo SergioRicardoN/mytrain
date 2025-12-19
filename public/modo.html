@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MY TRAIN - Modo de Treino</title>
+    <link rel="stylesheet" href="MododeTreino/modo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="container">
+        <div class="titulo-box">
+            <h2>MODO DE TREINO ⚡</h2>
+        </div>
+
+        <form id="formModo" action="/salvar-modo" method="POST">
+            <div class="opcoes">
+                <label class="card">
+          <input type="radio" name="modo" value="Militar" required>
+          <div class="card-content">
+            <i class="material-icons">gavel</i>
+            <h3>Militar</h3>
+            <p>Disciplina, foco e zero desculpas.</p>
+          </div>
+        </label>
+
+                <label class="card">
+          <input type="radio" name="modo" value="Fisiculturista">
+          <div class="card-content">
+            <i class="material-icons">fitness_center</i>
+            <h3>Fisiculturista</h3>
+            <p>Força, volume e estética.</p>
+          </div>
+        </label>
+
+                <label class="card">
+          <input type="radio" name="modo" value="Científico">
+          <div class="card-content">
+            <i class="material-icons">science</i>
+            <h3>Científico</h3>
+            <p>Baseado em dados, estratégia e precisão.</p>
+          </div>
+        </label>
+
+                <label class="card">
+          <input type="radio" name="modo" value="Competitivo">
+          <div class="card-content">
+            <i class="material-icons">emoji_events</i>
+            <h3>Competitivo</h3>
+            <p>Treine como se estivesse em um campeonato.</p>
+          </div>
+        </label>
+
+                <label class="card">
+          <input type="radio" name="modo" value="Zen">
+          <div class="card-content">
+            <i class="material-icons">self_improvement</i>
+            <h3>Zen / Equilíbrio</h3>
+            <p>Controle, respiração e mente tranquila.</p>
+          </div>
+        </label>
+
+                <label class="card">
+          <input type="radio" name="modo" value="Funcional">
+          <div class="card-content">
+            <i class="material-icons">directions_run</i>
+            <h3>Funcional</h3>
+            <p>Força útil, resistência e agilidade para o dia a dia.</p>
+          </div>
+        </label>
+            </div>
+
+            <button type="submit" class="btn-principal">Continuar</button>
+        </form>
+    </div>
+
+    <script src="MododeTreino/modo.js" defer></script>
+</body>
+
+</html>

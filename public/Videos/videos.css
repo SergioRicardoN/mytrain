@@ -1,0 +1,262 @@
+/* 🌤 Modo claro */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: #333;
+    padding-bottom: 80px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titulo {
+    font-size: 26px;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #555;
+}
+
+
+/* 🎥 Grid responsivo de vídeos */
+
+.videos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.video-item {
+    background: #ffffffee;
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #43a047;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    border-color: #2e7d32;
+}
+
+.video-item a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-thumb {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover .video-thumb {
+    transform: scale(1.05);
+}
+
+.video-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2e7d32;
+}
+
+
+/* 🔎 Estados de foco (acessibilidade) */
+
+.video-item a:focus-visible {
+    outline: 3px solid #2e7d32;
+    outline-offset: 6px;
+    border-radius: 12px;
+}
+
+.nav-item:focus-visible {
+    outline: 3px solid #2e7d32;
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+
+/* 🌙 Modo escuro */
+
+body.dark {
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+    color: #dfe6e9;
+}
+
+body.dark .titulo {
+    color: #66bb6a;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .subtitulo {
+    color: #b2bec3;
+    font-style: italic;
+}
+
+body.dark .video-item {
+    background-color: #1f1f1f;
+    border: 2px solid #66bb6a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .video-item:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    border-color: #81c784;
+}
+
+body.dark .video-title {
+    color: #a5d6a7;
+}
+
+body.dark .video-item a:focus-visible {
+    outline-color: #81c784;
+}
+
+
+/* ♿ Acessibilidade geral */
+
+body.acessibilidade {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+body.acessibilidade .titulo {
+    font-size: 28px;
+}
+
+body.acessibilidade .subtitulo {
+    font-size: 16px;
+}
+
+body.acessibilidade .video-title {
+    font-size: 18px;
+}
+
+body.acessibilidade .video-thumb {
+    border: 3px solid #2e7d32;
+}
+
+
+/* 📱 Barra de navegação (padrão 5 ícones, igual ranking/livros) */
+
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffffcc;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-item {
+    text-align: center;
+    color: #555;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nav-item i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.nav-item.active {
+    color: #2e7d32;
+}
+
+.nav-item.active i {
+    color: #2e7d32;
+}
+
+
+/* 🌙 Modo escuro nav */
+
+body.dark .nav-bar {
+    background: #1b1f1dcc;
+    border-top: 1px solid #555;
+}
+
+body.dark .nav-item {
+    color: #dfe6e9;
+}
+
+body.dark .nav-item.active {
+    color: #66bb6a;
+}
+
+body.dark .nav-item.active i {
+    color: #66bb6a;
+}
+
+
+/* ♿ Acessibilidade nav */
+
+body.acessibilidade .nav-item {
+    font-size: 14px;
+}
+
+
+/* 🌀 Respeitar redução de movimento */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+    .video-item:hover,
+    .video-item:hover .video-thumb {
+        transform: none !important;
+    }
+}
+
+
+/* 📱 Responsividade */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .titulo {
+        font-size: 22px;
+    }
+    .subtitulo {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .videos-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .video-title {
+        font-size: 14px;
+    }
+}

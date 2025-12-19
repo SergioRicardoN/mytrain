@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MY TRAIN - Tela Principal</title>
+    <link rel="stylesheet" href="Principal/principal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Cabeçalho com pontos + botão de saída -->
+        <div class="top-bar">
+            <div class="info">
+                <span><i class="material-icons">local_fire_department</i> <span id="fogo">0</span></span>
+                <span><i class="material-icons">attach_money</i> <span id="moedas">0</span></span>
+                <span><i class="material-icons">person</i> <span id="xp">0</span></span>
+            </div>
+            <!-- Botão de saída mini -->
+            <button class="btn-logout-mini" onclick="window.location.href='index.html'">
+        🚪 Sair
+      </button>
+        </div>
+
+        <!-- Título dinâmico do exercício -->
+        <div class="titulo-box">
+            <h2 id="tituloTreino">Treino</h2>
+            <p id="serieTreino">Série</p>
+        </div>
+
+        <!-- Boas-vindas -->
+        <div class="welcome">
+            <h3>SEJA BEM-VINDO AO MY TRAIN</h3>
+            <p>Prepare-se para treinar com disciplina e foco!</p>
+        </div>
+
+        <!-- Tutorial interativo -->
+        <div class="tutorial">
+            <h3>COMO FUNCIONA?</h3>
+            <div class="card">
+                <i class="material-icons">local_fire_department</i>
+                <h4>SEQUÊNCIA</h4>
+                <p>Pratique para que seu foguinho não apague.</p>
+            </div>
+            <div class="card">
+                <i class="material-icons">attach_money</i>
+                <h4>TRAINMONEY</h4>
+                <p>Ganhe moedas ao concluir treinos e use para upar seu ranking!</p>
+            </div>
+        </div>
+
+        <!-- Botão para iniciar -->
+        <button class="btn-principal" id="btn-treino">VAMOS COMEÇAR O TREINO</button>
+    </div>
+
+    <!-- Modal do vídeo -->
+    <div id="videoModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <!-- Botão de fechar -->
+            <span id="closeModal" class="close">&times;</span>
+
+            <!-- Área do vídeo com HUD overlay -->
+            <div class="modal-video" style="position:relative;">
+                <!-- HUD no canto inferior esquerdo -->
+                <div class="hud-overlay">
+                    <h3 id="exercicioNome">Flexão</h3>
+                    <p id="exercicioSerie">2/10</p>
+                </div>
+
+                <!-- Vídeo -->
+                <iframe id="videoFrame" src="" title="Treino" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+
+                <!-- Controles -->
+                <div class="video-controls">
+                    <button id="playBtn">▶️ Play</button>
+                    <button id="pauseBtn">⏸️ Pause</button>
+                    <button id="restartBtn">🔄 Reiniciar</button>
+                    <button id="prevBtn">⏮️ Exercício anterior</button>
+                    <button id="nextBtn">⏭️ Próximo exercício</button>
+                    <button id="finishBtn">✅ Finalizar treino</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de navegação -->
+    <nav class="nav-bar">
+        <a href="/principal.html" class="nav-item active">
+            <i class="material-icons">home</i>
+            <span>Principal</span>
+        </a>
+        <a href="/videos.html" class="nav-item">
+            <i class="material-icons">play_circle_filled</i>
+            <span>Vídeos</span>
+        </a>
+        <a href="/ranking.html" class="nav-item">
+            <i class="material-icons">emoji_events</i>
+            <span>Ranking</span>
+        </a>
+        <a href="/livros.html" class="nav-item">
+            <i class="material-icons">menu_book</i>
+            <span>PDF</span>
+        </a>
+        <a href="/config.html" class="nav-item">
+            <i class="material-icons">settings</i>
+            <span>Config</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="Principal/principal.js" defer></script>
+</body>
+
+</html>

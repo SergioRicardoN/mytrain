@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: `objetivo=${encodeURIComponent(objetivoSelecionado)}`
             })
             .then(() => {
-                window.location.href = "/dashboard.html";
+                window.location.href = "/estilo.html";
             })
             .catch(err => {
                 console.error("Erro ao enviar objetivo:", err);

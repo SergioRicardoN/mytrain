@@ -1,0 +1,653 @@
+/* 🔄 Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 🌤 Tema claro padrão */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #c8e6c9;
+    color: #333;
+    padding-bottom: 80px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* 🌙 Tema escuro */
+
+body.dark {
+    background-color: #1b1f1d;
+    color: #e0f2f1;
+}
+
+
+/* 📦 Container principal */
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* 🔥 Top bar ajustada */
+
+.top-bar {
+    background: #ffffffcc;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid #43a047;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .info {
+    display: flex;
+    gap: 15px;
+    font-weight: 600;
+    color: #388e3c;
+}
+
+.top-bar .material-icons {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+/* 🚪 Botão Sair Mini */
+
+.btn-logout-mini {
+    padding: 6px 12px;
+    background: #e53935;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-logout-mini:hover {
+    background: #c62828;
+    transform: scale(1.05);
+}
+
+
+/* 🌙 Dark mode ajustes */
+
+body.dark .top-bar {
+    background: #2e2e2ecc;
+    border: 3px solid #66bb6a;
+}
+
+body.dark .top-bar .info {
+    color: #81c784;
+}
+
+body.dark .btn-logout-mini {
+    background: #ff5252;
+}
+
+body.dark .btn-logout-mini:hover {
+    background: #d32f2f;
+}
+
+
+/* 🏋️ Título do treino */
+
+.titulo-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo-box h2 {
+    font-size: 26px;
+    color: #2e7d32;
+}
+
+.titulo-box p {
+    font-size: 14px;
+    color: #66bb6a;
+}
+
+body.dark .titulo-box h2,
+body.dark .titulo-box p {
+    color: #a5d6a7;
+}
+
+
+/* 👋 Boas-vindas */
+
+.welcome {
+    background: #81c784;
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid #43a047;
+}
+
+.welcome h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 14px;
+}
+
+body.dark .welcome {
+    background-color: #43a047;
+    color: #fff;
+    border: 3px solid #66bb6a;
+}
+
+
+/* 📘 Cards de tutorial */
+
+.tutorial {
+    margin-bottom: 30px;
+}
+
+.tutorial h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2e7d32;
+}
+
+.card {
+    background: #ffffffcc;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    border: 3px solid #43a047;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card i {
+    font-size: 28px;
+    color: #388e3c;
+    margin-bottom: 5px;
+}
+
+.card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+body.dark .tutorial h3 {
+    color: #a5d6a7;
+}
+
+body.dark .card {
+    background-color: #2e2e2e;
+    color: #e0f2f1;
+    border: 3px solid #66bb6a;
+}
+
+body.dark .card h4,
+body.dark .card p,
+body.dark .card i {
+    color: #81c784;
+}
+
+
+/* 🎯 Botão principal */
+
+.btn-principal {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #388e3c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-principal:hover {
+    background: #2e7d32;
+}
+
+body.dark .btn-principal {
+    background-color: #66bb6a;
+    color: #fff;
+}
+
+body.dark .btn-principal:hover {
+    background-color: #43a047;
+}
+
+
+/* 🎥 Modal de vídeo */
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Fundo um pouco mais escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 900px;
+    width: 95%;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: #ff5252;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #fff;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.close:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+
+.modal-video {
+    flex: 2;
+    text-align: center;
+    position: relative;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-video iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    display: block;
+}
+
+.video-controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.video-controls button {
+    flex: 1 1 45%;
+    margin: 5px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #388e3c;
+    color: #fff;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.video-controls button:hover {
+    background: #2e7d32;
+    transform: translateY(-2px);
+}
+
+.modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(145deg, #f1f8e9, #ffffff);
+    border-radius: 20px;
+    margin: 0;
+    padding: 30px;
+    border: 1px solid #dcedc8;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-info h3 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #2e7d32;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.modal-info p {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(45deg, #43a047, #66bb6a);
+    padding: 10px 35px;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(67, 160, 71, 0.4);
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+.modal-info p:hover {
+    transform: scale(1.05);
+}
+
+body.dark .modal-info {
+    background: linear-gradient(145deg, #1b1f1d, #252525);
+    border: 1px solid #333;
+}
+
+body.dark .modal-info h3 {
+    color: #a5d6a7;
+}
+
+body.dark .modal-info p {
+    background: linear-gradient(45deg, #2e7d32, #43a047);
+}
+
+
+/* 📱 Barra de navegação */
+
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffffcc;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-item {
+    text-align: center;
+    color: #555;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nav-item i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.nav-item.active {
+    color: #388e3c;
+}
+
+body.dark .nav-bar {
+    background: #1b1f1dcc;
+    border-top: 1px solid #555;
+}
+
+body.dark .nav-item {
+    color: #e0f2f1;
+}
+
+body.dark .nav-item.active {
+    color: #81c784;
+}
+
+
+/* ♿ Acessibilidade */
+
+body.acessibilidade {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+body.acessibilidade .titulo-box h2 {
+    font-size: 28px;
+}
+
+body.acessibilidade .welcome h3 {
+    font-size: 20px;
+}
+
+body.acessibilidade .btn-principal {
+    font-size: 18px;
+    padding: 18px;
+}
+
+
+/* 📱 Responsividade */
+
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 35px;
+    }
+    .modal-video iframe {
+        width: 100%;
+        height: 250px;
+    }
+    .modal-info {
+        width: 100%;
+        padding: 20px;
+    }
+    .modal-info h3 {
+        font-size: 24px;
+    }
+    .modal-info p {
+        font-size: 20px;
+    }
+    .close {
+        top: -10px;
+        right: -5px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-controls button {
+        flex: 1 1 100%;
+    }
+    .modal-video iframe {
+        height: 200px;
+    }
+}
+
+.hud-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.hud-overlay h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hud-overlay p {
+    font-size: 14px;
+    font-weight: 600;
+    background: #43a047;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.95);
+        opacity: 1;
+    }
+}
+
+.hud-overlay h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    flex: 1;
+}
+
+.hud-overlay p {
+    font-size: 13px;
+    font-weight: 800;
+    margin: 0;
+    background: #43a047;
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .hud-overlay {
+    background: rgba(30, 30, 30, 0.85) !important;
+    border: 1px solid #43a047 !important;
+    box-shadow: 0 0 15px rgba(67, 160, 71, 0.3);
+}
+
+body.dark .hud-overlay h3 {
+    color: #e0f2f1;
+}
+
+body.dark .hud-overlay p {
+    background: #2e7d32;
+    color: #fff;
+}
+
+body.acessibilidade .hud-overlay {
+    padding: 12px 20px;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+body.acessibilidade .hud-overlay h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+body.acessibilidade .hud-overlay p {
+    font-size: 18px;
+    padding: 5px 15px;
+}
+
+
+/* 🚪 Botão de saída */
+
+.logout-box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn-logout {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #e53935;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-logout:hover {
+    background: #c62828;
+    transform: translateY(-2px);
+}
+
+
+/* 🌙 Dark mode */
+
+body.dark .btn-logout {
+    background: #ff5252;
+    color: #fff;
+}
+
+body.dark .btn-logout:hover {
+    background: #d32f2f;
+}
+
+
+/* 📱 Responsividade */
+
+@media (max-width: 480px) {
+    .btn-logout {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+}

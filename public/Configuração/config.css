@@ -1,0 +1,166 @@
+/* 🌤 Tema claro */
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 26px;
+    color: #2e7d32;
+}
+
+#btn-sair {
+    background-color: #d63031;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bloco {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #43a047;
+    /* ✅ borda verde sempre */
+}
+
+.bloco h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #388e3c;
+}
+
+
+/* 🔘 Switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    margin-left: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 26px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #43a047;
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+
+/* 🔤 Select */
+
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+
+/* 🌙 Modo escuro */
+
+body.dark {
+    background-color: #1b1f1d;
+    color: #dfe6e9;
+}
+
+body.dark .bloco {
+    background-color: #2e2e2e;
+    border: 3px solid #66bb6a;
+    /* ✅ borda verde escuro */
+}
+
+body.dark h2 {
+    color: #a5d6a7;
+}
+
+body.dark select {
+    background-color: #b2bec3;
+    color: #2d3436;
+    border: 1px solid #636e72;
+}
+
+body.dark input:checked+.slider {
+    background-color: #66bb6a;
+}
+
+body.dark input:checked+.slider:before {
+    background-color: #2d3436;
+}
+
+
+/* ♿ Acessibilidade */
+
+body.acessibilidade {
+    font-size: 20px;
+    /* ✅ texto maior */
+    line-height: 1.8;
+    /* ✅ espaçamento melhor */
+}
+
+body.acessibilidade h1 {
+    font-size: 30px;
+    /* título maior */
+}
+
+body.acessibilidade h2 {
+    font-size: 22px;
+    /* subtítulos maiores */
+}
+
+body.acessibilidade #btn-sair {
+    font-size: 20px;
+    padding: 20px;
+    /* ✅ botão mais visível */
+}

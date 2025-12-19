@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MY TRAIN - Estilo de Treino</title>
+    <link rel="stylesheet" href="EstilodeTreino/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Título com fundo branco -->
+        <div class="titulo-box">
+            <h2>ESTILO DE TREINO 🏋️</h2>
+        </div>
+
+        <!-- Formulário -->
+        <form id="formEstilo" action="/salvar-estilo" method="POST">
+            <div class="opcoes">
+                <!-- Card Casa -->
+                <label class="card">
+          <input type="radio" name="estilo" value="Casa" required>
+          <div class="card-content">
+            <i class="material-icons">home</i>
+            <h3>Em Casa</h3>
+            <p>Treinos práticos com o que você tem disponível.</p>
+          </div>
+        </label>
+
+                <!-- Card Academia -->
+                <label class="card">
+          <input type="radio" name="estilo" value="Academia">
+          <div class="card-content">
+            <i class="material-icons">fitness_center</i>
+            <h3>Academia</h3>
+            <p>Equipamentos e estrutura completa para seus treinos.</p>
+          </div>
+        </label>
+            </div>
+
+            <!-- Botão -->
+            <button type="submit" class="btn-principal">Continuar</button>
+        </form>
+    </div>
+
+    <script src="EstilodeTreino/estilo.js" defer></script>
+</body>
+
+</html>
