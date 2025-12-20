@@ -1,113 +1,153 @@
-FUNCIONALIDADES
+MyTrain - Plataforma de Treinos Interativos
+🎯 Funcionalidades
+🎬 Modal de Vídeo com Controles
+Play/Pause - Controle de reprodução dos vídeos de treino
 
-Modal de vídeo com controles:
+Reiniciar - Recomeçar o exercício atual
 
-Play
+Próximo/Anterior - Navegação entre exercícios
 
-Pause
+Finalizar Treino - Concluir sessão e salvar progresso
 
-Reiniciar
+🏆 Sistema de Pontuação
+Fogo - Indicador de consistência nos treinos
 
-Próximo
+Moedas - Recompensa por conclusão de exercícios
 
-Anterior
+XP - Experiência acumulada ao completar treinos
 
-Finalizar treino
+Ranking Dinâmico - Medalhas para os melhores usuários
 
-Sistema de pontos:
+🎨 Interface e Usabilidade
+Modo Escuro - Tema escuro para conforto visual
 
-Fogo
+Modo Acessibilidade - Recursos para melhor experiência
 
-Moedas
+Design Responsivo - Adaptado para desktop e mobile
 
-XP (atualizados ao concluir treinos)
+Botão de Saída - Retorno seguro à tela de login
 
-Ranking dinâmico com medalhas para os melhores usuários
+---------------------------------
 
-Modo escuro
+mytrain/
+│
+├── index.html              # Tela de login
+├── principal.html          # Tela principal de treinos
+│
+├── Principal/
+│   ├── principal.css       # Estilos principais
+│   └── principal.js        # Lógica de treino e integração
+│
+├── server.js              # Servidor Node/Express
+└── README.md              # Documentação do projeto
 
-Modo acessibilidade
+--------------------------------------------------
 
-Botão de saída para retornar ao login
+🚀 Como Rodar o Projeto
 
-Design responsivo (desktop e mobile)
+1. Clonar o Repositório
+git clone https://github.com/SergioRicardoN/mytrain.git
+cd mytrain
 
-ESTRUTURA DO PROJETO
+2. Instalar Node.js
+Se ainda não tiver, baixe e instale a versão LTS em nodejs.org
 
-mytrain/ │ ├── index.html # Tela de login ├── principal.html # Tela principal de treinos ├── Principal/ │ ├── principal.css # Estilos principais │ └── principal.js # Lógica de treino e integração ├── server.js # Servidor Node/Express └── README.md # Documentação do projeto
+3. Instalar Dependências
 
-Observação: Se o server.js serve arquivos estáticos, mantenha seus HTML, CSS e JS onde o servidor espera (por exemplo, pasta public/ se configurado).
+# Inicializar projeto (se necessário)
+npm init -y
 
-COMO RODAR O PROJETO
+# Instalar Express
+npm install express
 
-Clonar o repositório: git clone https://github.com/SergioRicardoN/mytrain.git
+# Opcional - Banco de dados MySQL
+npm install mysql2
 
-Entrar na pasta do projeto: cd mytrain
+# Opcional - Para desenvolvimento com recarga automática
+npm install -g nodemon
 
-Instalar Node.js (se ainda não tiver): Baixar em nodejs.org e instalar a versão LTS
+4. Configurar Variáveis (se usar banco)
+No arquivo server.js, ajuste as configurações do MySQL:
 
-Instalar dependências do projeto: npm init -y (se ainda não existir package.json) npm install express (se usar banco MySQL: npm install mysql2) (opcional para desenvolvimento automático: npm install -g nodemon)
+// Ajustar conforme seu ambiente
+const dbConfig = {
+    host: 'localhost',
+    user: 'seu_usuario',
+    password: 'sua_senha',
+    database: 'mytrain'
+};
 
-Configurar variáveis de banco se necessário: No server.js, ajustar host, user, password e database do MySQL Se não usar banco ainda, comentar ou tratar blocos de conexão
+5. Iniciar o Servidor
 
-Iniciar o servidor: node server.js Ou, se instalou nodemon: nodemon server.js
+# Método padrão
+node server.js
 
-Acessar no navegador: http://localhost:3000/
+# Ou com recarga automática (se instalou nodemon)
+nodemon server.js
 
-DEMONSTRAÇÃO
+6. Acessar a Aplicação
+Abra seu navegador e acesse:
 
-HUD overlay no vídeo mostrando:
+http://localhost:3000/
 
-Nome do exercício
 
-Série atual
+🎮 Demonstração
+HUD Overlay no Vídeo
+Nome do exercício em execução
 
-Botão Sair na top-bar para retornar ao login
+Série atual sendo realizada
 
-Barra de navegação inferior com atalhos para:
+Botão "Sair" na barra superior para retornar ao login
 
-Principal
+Barra de Navegação Inferior
+Acesso rápido às principais seções:
 
-Vídeos
+Principal - Tela inicial de treinos
 
-Ranking
+Vídeos - Biblioteca de exercícios
 
-PDF
+Ranking - Classificação dos usuários
 
-Configurações
+PDF - Materiais de apoio
 
-TECNOLOGIAS UTILIZADAS
+Configurações - Personalização do sistema
 
-Node.js e npm
+💻 Tecnologias Utilizadas
+Backend: Node.js, Express
 
-Express (servidor web)
+Frontend: HTML5, CSS3, JavaScript (ES6+)
 
-MySQL com mysql2
+Banco de Dados: MySQL (Opcional)
 
-HTML5
+APIs: YouTube IFrame API para vídeos
 
-CSS3
+Gerenciamento: npm
 
-JavaScript (ES6)
-
-YouTube IFrame API
-
-REQUISITOS PARA FUNCIONAR
-
+✅ Requisitos para Funcionar
+Necessários
 Node.js instalado e disponível no PATH
 
-Dependências npm instaladas: express (se usar banco) mysql2 (opcional) nodemon
-
-Se usar banco de dados: MySQL Server instalado e rodando Banco mytrain criado Usuário e senha configurados (evitar root em produção)
+Dependências instaladas: express
 
 Porta 3000 livre no sistema
 
-Arquivos estáticos acessíveis conforme configuração do server.js (ex.: app.use(express.static('public')) caso use pasta public)
+Opcionais (se usar banco)
+MySQL Server instalado e rodando
 
-AUTOR
+Banco mytrain criado
 
-Projeto desenvolvido por Sergio Local: Jaboatão dos Guararapes - PE, Brasil
+Usuário e senha configurados no server.js
 
-LICENÇA
+Pacote mysql2 instalado
 
+Configuração de Arquivos Estáticos
+Certifique-se que o server.js esteja configurado para servir arquivos estáticos:
+app.use(express.static('caminho_da_pasta')); // Ex: 'public' ou '.'
+
+👤 Autor
+Sergio Ricardo
+Desenvolvedor do projeto
+Local: Jaboatão dos Guararapes - PE, Brasil
+
+📄 Licença
 Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e compartilhar.
